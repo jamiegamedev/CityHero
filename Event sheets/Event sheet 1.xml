@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="EnemyState" sid="2940499343766213" static="0" type="number">0</variable>
+        <comment>KEYBOARD CONTROLS</comment>
+        <event-block sid="4829187660266104">
+            <conditions>
+                <condition id="2" name="Key is down" sid="8115290971315861" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="5647933808174639" type="playerCenter">
+                    <param id="0" name="Speed">-130</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1412264332437754">
+            <conditions>
+                <condition id="2" inverted="1" name="Key is down" sid="9255397876912325" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="2493927482091552" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="9401506476086206" type="playerCenter">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7004000084943757">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2587657774789591" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="6509720601577172" type="playerCenter">
+                    <param id="0" name="Speed">130</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4712641243602453">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3444276181596996" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7773347947324659" type="playerCathcher">
+                    <param id="0" name="Pin to">playerCenter</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>TOUCH CONTROLS</comment>
+        <event-block sid="6791535004571686">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="9832509008847697" type="Touch">
+                    <param id="0" name="Object">LeftTouch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="6775779821939692" type="playerCenter">
+                    <param id="0" name="Speed">-130</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7644358208678159">
+            <conditions>
+                <condition id="4" inverted="1" name="Is touching object" sid="7071965446308765" type="Touch">
+                    <param id="0" name="Object">LeftTouch</param>
+                </condition>
+                <condition id="4" inverted="1" name="Is touching object" sid="1240054558359936" type="Touch">
+                    <param id="0" name="Object">RightTouch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="7437065393544269" type="playerCenter">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="95399739876874">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="7041197418378494" type="Touch">
+                    <param id="0" name="Object">RightTouch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="748285694970929" type="playerCenter">
+                    <param id="0" name="Speed">130</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="993377412455942">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3226670264788547" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6526703433621328" type="playerCathcher">
+                    <param id="0" name="Pin to">playerCenter</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5148792326870918">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9239012479232088" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1884667631597798" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>GAME MECHANICS</comment>
+        <comment>Enemy state 0 is idle, not attacks. After every major attack allows 2 second cool down and return to standard attacking 1</comment>
+        <event-block sid="2306065257898089">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9690297787950176" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="8008727545181571" type="center">
+                    <param id="0" name="Speed">180</param>
+                </action>
+                <action id="-16" name="Wait" sid="6406833545272256" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="6965964468564693" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Enemy standard attack mode aka 1. Fire randomnly every 1-5 seconds</comment>
+        <event-block sid="2279946789673926">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4126060248441867" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="7928936459553099" type="System">
+                    <param id="0" name="Interval (seconds)">random(1,5)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5165323945282018" type="TextBox">
+                    <param id="0" name="Text">&quot;Default Attack&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4333148732308947" type="center">
+                    <param id="0" name="Object">bullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Attack state 2. Enemy sprays bulletts in a circle for 2 seconds</comment>
+        <event-block sid="664641409356101">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4244370314510259" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="7790744200916492" type="System">
+                    <param id="0" name="Interval (seconds)">0.15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1888301833517535" type="TextBox">
+                    <param id="0" name="Text">&quot;Attack2&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="947385632956509" type="center">
+                    <param id="0" name="Object">slowerBullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5062964379419354">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2565109271057376" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="5434925767469593" type="System">
+                    <param id="0" name="Seconds">1.2</param>
+                </action>
+                <action id="-9" name="Set value" sid="4678163153833561" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>bullets colide with shield they die</comment>
+        <event-block sid="1492845490254988">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8942564241266817" type="bullet">
+                    <param id="0" name="Object">playerCathcher</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3898005131330529" type="bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="2170522866173089">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1499254821861213" type="slowerBullet">
+                    <param id="0" name="Object">playerCathcher</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7802696319134879" type="slowerBullet" />
+            </actions>
+        </event-block>
+        <comment>state changer</comment>
+        <event-block sid="9164627516152233">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3328284333727432" type="System">
+                    <param id="0" name="Interval (seconds)">random(10,30)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2285910760388867" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3127160954741278">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2507136538998632" type="System">
+                    <param id="0" name="Interval (seconds)">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5945441608420524" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2253230619583688">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6130671218257428" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="3259498940619018" type="System">
+                    <param id="0" name="Interval (seconds)">0.7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2574888063942053" type="TextBox">
+                    <param id="0" name="Text">&quot;Attack3&quot;</param>
+                </action>
+                <action id="-19" name="Rotate counter-clockwise" sid="3565455952882482" type="center">
+                    <param id="0" name="Degrees">90</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9492598945474688" type="center">
+                    <param id="0" name="Object">slowerBullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8082152338292111">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5122432354175197" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="7752762165779859" type="center">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4900905488719955" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="6456709922168131" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

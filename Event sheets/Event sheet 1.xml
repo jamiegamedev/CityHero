@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="timer" sid="7601131313519906" static="0" type="number">0</variable>
+        <variable constant="0" name="health" sid="140231717750104" static="0" type="number">5</variable>
         <variable constant="0" name="EnemyState" sid="2940499343766213" static="0" type="number">0</variable>
         <comment>KEYBOARD CONTROLS</comment>
         <event-block sid="4829187660266104">
@@ -140,6 +142,29 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9004736572731867">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7746519850605167" type="System">
+                    <param id="0" name="Interval (seconds)">0.01</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="5759862502377565" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">0.01</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3285891550463835">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2649720135431455" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5575577143542913" type="TIMER">
+                    <param id="0" name="Text">&quot;Timer: &quot;&amp; timer</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Enemy standard attack mode aka 1. Fire randomnly every 1-5 seconds</comment>
         <event-block sid="2279946789673926">
             <conditions>
@@ -153,7 +178,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="5165323945282018" type="TextBox">
+                <action id="0" name="Set text" sid="5165323945282018" type="DebugBox">
                     <param id="0" name="Text">&quot;Default Attack&quot;</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="4333148732308947" type="center">
@@ -176,7 +201,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="1888301833517535" type="TextBox">
+                <action id="0" name="Set text" sid="1888301833517535" type="DebugBox">
                     <param id="0" name="Text">&quot;Attack2&quot;</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="947385632956509" type="center">
@@ -213,6 +238,17 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="3898005131330529" type="bullet" />
+                <action id="-7" name="Set size" sid="6187297226922389" type="playerCathcher">
+                    <param id="0" name="Width">140</param>
+                    <param id="1" name="Height">40</param>
+                </action>
+                <action id="-16" name="Wait" sid="3721420708002163" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-7" name="Set size" sid="3957459958255054" type="playerCathcher">
+                    <param id="0" name="Width">128</param>
+                    <param id="1" name="Height">32</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2170522866173089">
@@ -223,6 +259,17 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="7802696319134879" type="slowerBullet" />
+                <action id="-7" name="Set size" sid="4979823435599272" type="playerCathcher">
+                    <param id="0" name="Width">140</param>
+                    <param id="1" name="Height">40</param>
+                </action>
+                <action id="-16" name="Wait" sid="8890703880631578" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-7" name="Set size" sid="4434766343351426" type="playerCathcher">
+                    <param id="0" name="Width">128</param>
+                    <param id="1" name="Height">32</param>
+                </action>
             </actions>
         </event-block>
         <comment>state changer</comment>
@@ -264,7 +311,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="2574888063942053" type="TextBox">
+                <action id="0" name="Set text" sid="2574888063942053" type="DebugBox">
                     <param id="0" name="Text">&quot;Attack3&quot;</param>
                 </action>
                 <action id="-19" name="Rotate counter-clockwise" sid="3565455952882482" type="center">
@@ -295,6 +342,135 @@
                 <action id="-9" name="Set value" sid="6456709922168131" type="System">
                     <param id="0" name="Variable">EnemyState</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Receive Damage</comment>
+        <event-block sid="91055332318731">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="9669187063086116" type="bullet" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4876185950099013" type="bullet" />
+                <action id="0" name="Spawn another object" sid="5373909161885177" type="center">
+                    <param id="0" name="Object">HitFlash</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="2693258797369792" type="shaker">
+                    <param id="0" name="Magnitude">30</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="2603325506562091" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1688255453671476">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="4833569427582261" type="slowerBullet" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8843403356589659" type="slowerBullet" />
+                <action id="0" name="Spawn another object" sid="8984039942849913" type="center">
+                    <param id="0" name="Object">HitFlash</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="6949953454562317" type="shaker">
+                    <param id="0" name="Magnitude">30</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="9143617327292891" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3867719075131752">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1925183085370802" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="3223274282654972" type="positiveHealth">
+                    <param id="0" name="Width">256</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2660387085954322">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3919677677246764" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="6714038206118197" type="positiveHealth">
+                    <param id="0" name="Width">200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="492595573640546">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3057731757384352" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="3387703720219105" type="positiveHealth">
+                    <param id="0" name="Width">150</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7558587526691509">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4262367704015217" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="7808367463739531" type="positiveHealth">
+                    <param id="0" name="Width">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9502997395299051">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1433158310132258" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="4055925495642141" type="positiveHealth">
+                    <param id="0" name="Width">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7491160568662408">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5698913364163131" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="619305166776451" type="positiveHealth">
+                    <param id="0" name="Width">0</param>
                 </action>
             </actions>
         </event-block>

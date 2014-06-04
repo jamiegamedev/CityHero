@@ -11,7 +11,7 @@
         <horizontal>500</horizontal>
         <vertical>500</vertical>
     </margins>
-    <unbounded-scrolling>0</unbounded-scrolling>
+    <unbounded-scrolling>1</unbounded-scrolling>
     <layers>
         <layer name="Layer 0" sid="5311912786896708">
             <initially-visible>1</initially-visible>
@@ -49,7 +49,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="11">
+                <instance type="TouchStartText" uid="11">
                     <properties>
                         <text>TOUCH TO START</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -76,7 +76,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="12">
+                <instance type="CityHeroText" uid="12">
                     <properties>
                         <text>CITY HERO</text>
                         <initial-visibility>Visible</initial-visibility>

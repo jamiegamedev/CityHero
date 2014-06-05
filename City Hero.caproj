@@ -216,6 +216,23 @@
         <object-type name="TIMER" sid="7597783052699393">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Sprite2" sid="2375619053123188">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7271709423097671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501779">
+                        <collision-poly>
+                            <point x="0.0928571" y="0.13879" />
+                            <point x="0.5" y="0.740214" />
+                            <point x="0.919048" y="0.120996" />
+                            <point x="0.92619" y="0.88968" />
+                            <point x="0.5" y="0.743772" />
+                            <point x="0.1" y="0.850534" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">

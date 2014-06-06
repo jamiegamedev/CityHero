@@ -7,7 +7,7 @@
         <variable constant="0" name="health" sid="140231717750104" static="0" type="number">5</variable>
         <variable constant="0" name="EnemyState" sid="2940499343766213" static="0" type="number">0</variable>
         <comment>KEYBOARD CONTROLS</comment>
-        <event-block sid="4829187660266104">
+        <event-block disabled="1" sid="4829187660266104">
             <conditions>
                 <condition id="2" name="Key is down" sid="8115290971315861" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
@@ -19,7 +19,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1412264332437754">
+        <event-block disabled="1" sid="1412264332437754">
             <conditions>
                 <condition id="2" inverted="1" name="Key is down" sid="9255397876912325" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
@@ -34,7 +34,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7004000084943757">
+        <event-block disabled="1" sid="7004000084943757">
             <conditions>
                 <condition id="2" name="Key is down" sid="2587657774789591" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
@@ -276,17 +276,17 @@
         <event-block sid="9164627516152233">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="3328284333727432" type="System">
-                    <param id="0" name="Interval (seconds)">random(10,30)</param>
+                    <param id="0" name="Interval (seconds)">5</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="2285910760388867" type="System">
                     <param id="0" name="Variable">EnemyState</param>
-                    <param id="1" name="Value">2</param>
+                    <param id="1" name="Value">int(random(2,4)) </param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3127160954741278">
+        <event-block disabled="1" sid="3127160954741278">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="2507136538998632" type="System">
                     <param id="0" name="Interval (seconds)">50</param>
@@ -333,6 +333,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="1398476506779928" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">3</param>
+                </action>
                 <action behavior="Rotate" id="0" name="Set speed" sid="7752762165779859" type="center">
                     <param id="0" name="Speed">0</param>
                 </action>
@@ -499,6 +503,25 @@
                     <param id="0" name="Time scale">1.0</param>
                 </action>
                 <action id="-26" name="Restart layout" sid="3129207644442607" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="7420759214573473">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="5139351957579067" type="Touch">
+                    <param id="0" name="Object">Sprite2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7496152251777135" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="1879176452751103" type="System" />
+                <action id="-13" name="Set time scale" sid="9395911013981492" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="3930364853594053" type="System" />
             </actions>
         </event-block>
     </events>

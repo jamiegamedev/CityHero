@@ -4,12 +4,12 @@
     <sid>3756846653096501</sid>
     <event-sheet></event-sheet>
     <size>
-        <width>1708</width>
-        <height>960</height>
+        <width>1024</width>
+        <height>768</height>
     </size>
     <margins>
-        <horizontal>500</horizontal>
-        <vertical>500</vertical>
+        <horizontal>1024</horizontal>
+        <vertical>768</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>

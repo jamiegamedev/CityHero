@@ -3,11 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="GameSpeed" sid="63319478434843" static="0" type="number">0</variable>
         <variable constant="0" name="timer" sid="7601131313519906" static="0" type="number">0</variable>
         <variable constant="0" name="health" sid="140231717750104" static="0" type="number">5</variable>
         <variable constant="0" name="EnemyState" sid="2940499343766213" static="0" type="number">0</variable>
         <comment>KEYBOARD CONTROLS</comment>
-        <event-block disabled="1" sid="4829187660266104">
+        <event-block sid="4829187660266104">
             <conditions>
                 <condition id="2" name="Key is down" sid="8115290971315861" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
@@ -19,7 +20,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="1412264332437754">
+        <event-block sid="1412264332437754">
             <conditions>
                 <condition id="2" inverted="1" name="Key is down" sid="9255397876912325" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
@@ -34,7 +35,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="7004000084943757">
+        <event-block sid="7004000084943757">
             <conditions>
                 <condition id="2" name="Key is down" sid="2587657774789591" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
@@ -55,10 +56,14 @@
                     <param id="0" name="Pin to">playerCenter</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3347913627661716" type="secondBullet">
+                    <param id="0" name="Pin to">center</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>TOUCH CONTROLS</comment>
-        <event-block sid="6791535004571686">
+        <event-block disabled="1" sid="6791535004571686">
             <conditions>
                 <condition id="4" name="Is touching object" sid="9832509008847697" type="Touch">
                     <param id="0" name="Object">LeftTouch</param>
@@ -70,7 +75,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7644358208678159">
+        <event-block disabled="1" sid="7644358208678159">
             <conditions>
                 <condition id="4" inverted="1" name="Is touching object" sid="7071965446308765" type="Touch">
                     <param id="0" name="Object">LeftTouch</param>
@@ -85,7 +90,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="95399739876874">
+        <event-block disabled="1" sid="95399739876874">
             <conditions>
                 <condition id="4" name="Is touching object" sid="7041197418378494" type="Touch">
                     <param id="0" name="Object">RightTouch</param>
@@ -181,6 +186,9 @@
                 <action id="0" name="Set text" sid="5165323945282018" type="DebugBox">
                     <param id="0" name="Text">&quot;Default Attack&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="9578126028215536" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="4333148732308947" type="center">
                     <param id="0" name="Object">bullet</param>
                     <param id="1" name="Layer">0</param>
@@ -229,6 +237,128 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Enemy State 3 Rotates 90 degrees fires once </comment>
+        <event-block sid="8082152338292111">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5122432354175197" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="7752762165779859" type="center">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4900905488719955" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="6456709922168131" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2253230619583688">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6130671218257428" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="3259498940619018" type="System">
+                    <param id="0" name="Interval (seconds)">0.7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2574888063942053" type="DebugBox">
+                    <param id="0" name="Text">&quot;Attack3&quot;</param>
+                </action>
+                <action id="-19" name="Rotate counter-clockwise" sid="3565455952882482" type="center">
+                    <param id="0" name="Degrees">90</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9492598945474688" type="center">
+                    <param id="0" name="Object">slowerBullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Attack 4 Fire in opposites direction twice. </comment>
+        <event-block sid="3649635000030834">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9676880559793798" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9144648300281329" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7027597816667912" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5805494193804651" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3629539097308419" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Rotate" id="0" name="Set speed" sid="7038593155877446" type="center">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6128204558338108" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="8509004976396576" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4735054831493164">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5129675193701968" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="7134083115418321" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4431538377711095" type="DebugBox">
+                    <param id="0" name="Text">&quot;Attack4&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9961944259408779" type="center">
+                    <param id="0" name="Object">slowerBullet2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9317505284529886" type="System">
+                    <param id="0" name="Seconds">0.6</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="8150704703863171" type="secondBullet">
+                    <param id="0" name="Object">slowerBullet2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-19" name="Rotate counter-clockwise" sid="4562268796079992" type="center">
+                    <param id="0" name="Degrees">90</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>bullets colide with shield they die</comment>
         <event-block sid="1492845490254988">
             <conditions>
@@ -272,80 +402,79 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="887145383500293">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1059473718518556" type="slowerBullet2">
+                    <param id="0" name="Object">playerCathcher</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5384188378278075" type="slowerBullet2" />
+                <action id="-7" name="Set size" sid="860429567816728" type="playerCathcher">
+                    <param id="0" name="Width">140</param>
+                    <param id="1" name="Height">40</param>
+                </action>
+                <action id="-16" name="Wait" sid="1769499160853024" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-7" name="Set size" sid="5567726901575462" type="playerCathcher">
+                    <param id="0" name="Width">128</param>
+                    <param id="1" name="Height">32</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>state changer</comment>
         <event-block sid="9164627516152233">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="3328284333727432" type="System">
+                    <param id="0" name="Interval (seconds)">random(10,20)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7327189388699349" type="System">
+                    <param id="0" name="Variable">GameSpeed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7688397294266024" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">int(random(2,5)) </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1889313592771074">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="1027374533774679" type="System">
+                    <param id="0" name="Interval (seconds)">random(10)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9995491898039012" type="System">
+                    <param id="0" name="Variable">GameSpeed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1080745728919228" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">int(random(2,5)) </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1427428519628334">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4752499703014732" type="System">
                     <param id="0" name="Interval (seconds)">5</param>
                 </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="2285910760388867" type="System">
-                    <param id="0" name="Variable">EnemyState</param>
-                    <param id="1" name="Value">int(random(2,4)) </param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="3127160954741278">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="2507136538998632" type="System">
-                    <param id="0" name="Interval (seconds)">50</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="5945441608420524" type="System">
-                    <param id="0" name="Variable">EnemyState</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2253230619583688">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="6130671218257428" type="System">
-                    <param id="0" name="Variable">EnemyState</param>
+                <condition id="-14" name="Compare variable" sid="1704125919470694" type="System">
+                    <param id="0" name="Variable">GameSpeed</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
-                </condition>
-                <condition id="-6" name="Every X seconds" sid="3259498940619018" type="System">
-                    <param id="0" name="Interval (seconds)">0.7</param>
+                    <param id="2" name="Value">2</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="2574888063942053" type="DebugBox">
-                    <param id="0" name="Text">&quot;Attack3&quot;</param>
-                </action>
-                <action id="-19" name="Rotate counter-clockwise" sid="3565455952882482" type="center">
-                    <param id="0" name="Degrees">90</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="9492598945474688" type="center">
-                    <param id="0" name="Object">slowerBullet</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8082152338292111">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="5122432354175197" type="System">
+                <action id="-9" name="Set value" sid="3918003045807778" type="System">
                     <param id="0" name="Variable">EnemyState</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="1398476506779928" type="System">
-                    <param id="0" name="Variable">EnemyState</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-                <action behavior="Rotate" id="0" name="Set speed" sid="7752762165779859" type="center">
-                    <param id="0" name="Speed">0</param>
-                </action>
-                <action id="-16" name="Wait" sid="4900905488719955" type="System">
-                    <param id="0" name="Seconds">4</param>
-                </action>
-                <action id="-9" name="Set value" sid="6456709922168131" type="System">
-                    <param id="0" name="Variable">EnemyState</param>
-                    <param id="1" name="Value">0</param>
+                    <param id="1" name="Value">int(random(2,5)) </param>
                 </action>
             </actions>
         </event-block>
@@ -389,6 +518,28 @@
                     <param id="2" name="Mode">0</param>
                 </action>
                 <action id="-11" name="Subtract from" sid="9143617327292891" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2305296332300821">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="2339813469352691" type="slowerBullet2" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3848915647294924" type="slowerBullet2" />
+                <action id="0" name="Spawn another object" sid="5582004378930285" type="center">
+                    <param id="0" name="Object">HitFlash</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="1226668962823564" type="shaker">
+                    <param id="0" name="Magnitude">30</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="8798403777249747" type="System">
                     <param id="0" name="Variable">health</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -522,6 +673,41 @@
                     <param id="0" name="Time scale">1.0</param>
                 </action>
                 <action id="-26" name="Restart layout" sid="3930364853594053" type="System" />
+            </actions>
+        </event-block>
+        <comment>GameSpeed change conditions</comment>
+        <event-block sid="1318280172366669">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="1070445020750142" type="System">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Time (seconds)">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8055313248868734" type="System">
+                    <param id="0" name="Variable">GameSpeed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="6304322616070248" type="DebugBox2">
+                    <param id="0" name="Text">&quot;Speed 1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7035827035932281">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="4341731067666495" type="System">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Time (seconds)">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3147864704519414" type="System">
+                    <param id="0" name="Variable">GameSpeed</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Set text" sid="7953922056626284" type="DebugBox2">
+                    <param id="0" name="Text">&quot;Speed 2&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>Game Mechanics</name>
     <events>
+        <variable constant="0" name="disparitionSpeed" sid="4681057794841868" static="0" type="number">15</variable>
         <variable constant="0" name="GameSpeed" sid="63319478434843" static="0" type="number">0</variable>
         <variable constant="0" name="timer" sid="7601131313519906" static="0" type="number">0</variable>
         <variable constant="0" name="health" sid="140231717750104" static="0" type="number">5</variable>
@@ -181,6 +182,26 @@
                 <condition id="-6" name="Every X seconds" sid="7928936459553099" type="System">
                     <param id="0" name="Interval (seconds)">random(1,5)</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="409742318853128" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="4473206348190642" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5416225374130191" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="545985442429974" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="5165323945282018" type="DebugBox">
@@ -207,6 +228,26 @@
                 <condition id="-6" name="Every X seconds" sid="7790744200916492" type="System">
                     <param id="0" name="Interval (seconds)">0.15</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="3801521522708713" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3097736114844506" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7302577553723563" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5844580199163203" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="1888301833517535" type="DebugBox">
@@ -226,6 +267,26 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="4669232694531033" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9867418478761543" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6308237303765338" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9533970702640187" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-16" name="Wait" sid="5434925767469593" type="System">
@@ -244,6 +305,26 @@
                     <param id="0" name="Variable">EnemyState</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5085808118874786" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3385508641122624" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9936058680943353" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7308810513600974" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">5</param>
                 </condition>
             </conditions>
             <actions>
@@ -268,6 +349,26 @@
                 </condition>
                 <condition id="-6" name="Every X seconds" sid="3259498940619018" type="System">
                     <param id="0" name="Interval (seconds)">0.7</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="910874773041756" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="4386475456282953" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6798700534847877" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7919430074276236" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">5</param>
                 </condition>
             </conditions>
             <actions>
@@ -318,7 +419,7 @@
                     <param id="0" name="Speed">0</param>
                 </action>
                 <action id="-16" name="Wait" sid="6128204558338108" type="System">
-                    <param id="0" name="Seconds">5</param>
+                    <param id="0" name="Seconds">6</param>
                 </action>
                 <action id="-9" name="Set value" sid="8509004976396576" type="System">
                     <param id="0" name="Variable">EnemyState</param>
@@ -335,6 +436,26 @@
                 </condition>
                 <condition id="-6" name="Every X seconds" sid="7134083115418321" type="System">
                     <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6261795006474092" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2776339520215526" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2758213688334505" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7639275943775592" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">5</param>
                 </condition>
             </conditions>
             <actions>
@@ -434,8 +555,20 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="134237191393934" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="9167087599048633" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-16" name="Wait" sid="6926490286221566" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
                 <action id="-9" name="Set value" sid="7688397294266024" type="System">
                     <param id="0" name="Variable">EnemyState</param>
                     <param id="1" name="Value">int(random(2,5)) </param>
@@ -452,8 +585,20 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="9170640620450477" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="9891030596924286" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-16" name="Wait" sid="2486355866847884" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
                 <action id="-9" name="Set value" sid="1080745728919228" type="System">
                     <param id="0" name="Variable">EnemyState</param>
                     <param id="1" name="Value">int(random(2,5)) </param>
@@ -470,8 +615,20 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="541482087952704" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="9043065215060916" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-16" name="Wait" sid="6200150616922399" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
                 <action id="-9" name="Set value" sid="3918003045807778" type="System">
                     <param id="0" name="Variable">EnemyState</param>
                     <param id="1" name="Value">int(random(2,5)) </param>
@@ -707,6 +864,31 @@
                 </action>
                 <action id="0" name="Set text" sid="7953922056626284" type="DebugBox2">
                     <param id="0" name="Text">&quot;Speed 2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Effects Sheet</comment>
+        <event-block sid="9625090490720095">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3792083452995131" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1959542669271125" type="bullet">
+                    <param id="0" name="Object">bulletTrail</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5504984078402502">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5683320263184348" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4741028530979675" type="slowerBullet">
+                    <param id="0" name="Object">bulletTrail2</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>

@@ -48,11 +48,11 @@
                         <x>838.285705566</x>
                         <y>332.35559082</y>
                         <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
+                        <width>130.559997559</width>
+                        <height>129.279998779</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.495049506</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -291,6 +291,72 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bulletTrail" uid="36">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.3</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>935</x>
+                        <y>-41</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.483999997</hotspotX>
+                        <hotspotY>0.495999992</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="bulletTrail2" uid="35">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.2</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1078</x>
+                        <y>-45</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.483999997</hotspotX>
+                        <hotspotY>0.495999992</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

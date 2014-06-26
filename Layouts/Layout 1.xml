@@ -2,7 +2,7 @@
 <c2layout>
     <name>Layout 1</name>
     <sid>7877768806369823</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Game Mechanics</event-sheet>
     <size>
         <width>1024</width>
         <height>768</height>
@@ -34,8 +34,11 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Burn" />
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
+                    <effect-fallback>10</effect-fallback>
                     <world>
                         <x>512</x>
                         <y>384</y>
@@ -45,6 +48,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite4" uid="37">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-320</x>
+                        <y>288</y>
+                        <z>0</z>
+                        <width>351</width>
+                        <height>357</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501424491</hotspotX>
+                        <hotspotY>0.50140059</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -109,11 +134,11 @@
                         <x>512</x>
                         <y>384</y>
                         <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
+                        <width>130.559997559</width>
+                        <height>129.279998779</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.495049506</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

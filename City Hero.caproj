@@ -11,10 +11,12 @@
     <saved-with-version>17000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="R0J0hound" id="c2canvas" version="2">Canvas</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -23,7 +25,9 @@
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="burn">Burn</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -57,7 +61,11 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9246137414869479" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.49505" />
+                </animation>
+                <animation framecount="2" loop="0" name="fire" pingpong="0" repeatcount="1" repeatto="0" sid="8536616474874634" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.49505" />
+                    <frame duration="1" hotspotX="1.21569" hotspotY="-1.49505" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -195,6 +203,11 @@
         </object-type>
         <object-type name="background" sid="9141341730080374">
             <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Burn">
+                    <effect id="burn" />
+                </effect-type>
+            </effects>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6695598597587291" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -269,17 +282,117 @@
         <object-type name="DebugBox2" sid="7466592852681792">
             <plugin id="TextBox" />
         </object-type>
+        <object-type name="Sprite3" sid="2284499574521474">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="2663651228733527">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7818529957975049" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles" sid="9892018707101299">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="Pin" sid="9411408567676155">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Particles2" sid="8377110952925557">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Canvas" sid="7310865809495806">
+            <plugin id="c2canvas" />
+            <texture />
+        </object-type>
+        <object-type name="bulletTrail" sid="316535542017097">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4902169308621257">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5915088614022627" speed="5">
+                    <frame duration="1" hotspotX="0.484" hotspotY="0.496">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bulletTrail2" sid="7441610005840907">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="6444943051450022">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6123982757731359" speed="5">
+                    <frame duration="1" hotspotX="0.484" hotspotY="0.496">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bulletTrail3" sid="6439161689007717">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="5387644949079466">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8470588345731661" speed="5">
+                    <frame duration="1" hotspotX="0.484" hotspotY="0.496">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="2029190731059375">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8386953085273598" speed="5">
+                    <frame duration="1" hotspotX="0.501424" hotspotY="0.501401" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
+        <layout>Splash.xml</layout>
         <layout>Opening.xml</layout>
         <layout>Layout 1.xml</layout>
         <layout>GAME MANAGER.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Game Mechanics.xml</event-sheet>
+        <event-sheet>Title Screen.xml</event-sheet>
         <event-sheet>Tried mechanics.xml</event-sheet>
+        <event-sheet>Splash.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />

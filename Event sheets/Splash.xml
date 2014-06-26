@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Splash</name>
+    <events>
+        <event-block sid="3678072512008146">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2156283924630597" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="6571106571466526" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="7122265583767015" type="Sprite3" />
+            </actions>
+        </event-block>
+        <event-block sid="6778122676996397">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade out finished" sid="1972373253411549" type="Sprite3" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6811156460692385" type="System">
+                    <param id="0" name="Layout">Opening</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="144193414373175">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3089528453956877" type="Touch">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8762799492506924" type="System">
+                    <param id="0" name="Layout">Opening</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9308305139320449">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1503238952333085" type="Touch">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9433796576299105" type="System">
+                    <param id="0" name="Layout">Opening</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

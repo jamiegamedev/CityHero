@@ -258,6 +258,11 @@
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="3152021117092116" type="center">
+                    <param id="0" name="Object">Particles3</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5062964379419354">
@@ -380,6 +385,11 @@
                 </action>
                 <action id="0" name="Spawn another object" sid="9492598945474688" type="center">
                     <param id="0" name="Object">slowerBullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9401714136846809" type="center">
+                    <param id="0" name="Object">Particles3</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">0</param>
                 </action>
@@ -521,6 +531,16 @@
                     <param id="0" name="Width">128</param>
                     <param id="1" name="Height">32</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="7749849842139481">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7967948635399618" type="playerCathcher">
+                    <param id="0" name="Object">Particles3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5987757579056525" type="Particles3" />
             </actions>
         </event-block>
         <event-block sid="887145383500293">
@@ -712,7 +732,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="3223274282654972" type="positiveHealth">
-                    <param id="0" name="Width">256</param>
+                    <param id="0" name="Width">320</param>
                 </action>
             </actions>
         </event-block>
@@ -726,7 +746,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="6714038206118197" type="positiveHealth">
-                    <param id="0" name="Width">200</param>
+                    <param id="0" name="Width">270</param>
                 </action>
             </actions>
         </event-block>
@@ -740,7 +760,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="3387703720219105" type="positiveHealth">
-                    <param id="0" name="Width">150</param>
+                    <param id="0" name="Width">190</param>
                 </action>
             </actions>
         </event-block>
@@ -754,7 +774,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="7808367463739531" type="positiveHealth">
-                    <param id="0" name="Width">100</param>
+                    <param id="0" name="Width">130</param>
                 </action>
             </actions>
         </event-block>
@@ -768,7 +788,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="4055925495642141" type="positiveHealth">
-                    <param id="0" name="Width">50</param>
+                    <param id="0" name="Width">70</param>
                 </action>
             </actions>
         </event-block>
@@ -876,19 +896,7 @@
                 <action id="0" name="Spawn another object" sid="1959542669271125" type="bullet">
                     <param id="0" name="Object">bulletTrail</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5504984078402502">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="5683320263184348" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="4741028530979675" type="slowerBullet">
-                    <param id="0" name="Object">bulletTrail2</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">1</param>
                 </action>
             </actions>
         </event-block>

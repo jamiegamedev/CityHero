@@ -140,7 +140,7 @@
                     <param id="0" name="Speed">180</param>
                 </action>
                 <action id="-16" name="Wait" sid="6406833545272256" type="System">
-                    <param id="0" name="Seconds">2</param>
+                    <param id="0" name="Seconds">4</param>
                 </action>
                 <action id="-9" name="Set value" sid="6965964468564693" type="System">
                     <param id="0" name="Variable">EnemyState</param>
@@ -207,13 +207,21 @@
                 <action id="0" name="Set text" sid="5165323945282018" type="DebugBox">
                     <param id="0" name="Text">&quot;Default Attack&quot;</param>
                 </action>
+                <action id="4" name="Set animation" sid="1150617096205235" type="center">
+                    <param id="0" name="Animation">&quot;fire&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-16" name="Wait" sid="9578126028215536" type="System">
-                    <param id="0" name="Seconds">1</param>
+                    <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="4333148732308947" type="center">
                     <param id="0" name="Object">bullet</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9956606717061647" type="center">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -256,12 +264,7 @@
                 <action id="0" name="Spawn another object" sid="947385632956509" type="center">
                     <param id="0" name="Object">slowerBullet</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="3152021117092116" type="center">
-                    <param id="0" name="Object">Particles3</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">1</param>
                 </action>
             </actions>
         </event-block>
@@ -294,12 +297,20 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="4" name="Set animation" sid="424906972809145" type="center">
+                    <param id="0" name="Animation">&quot;starPink&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-16" name="Wait" sid="5434925767469593" type="System">
                     <param id="0" name="Seconds">1.2</param>
                 </action>
                 <action id="-9" name="Set value" sid="4678163153833561" type="System">
                     <param id="0" name="Variable">EnemyState</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="5658888921691413" type="center">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -333,11 +344,19 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="4" name="Set animation" sid="8566665792371552" type="center">
+                    <param id="0" name="Animation">&quot;starPink2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action behavior="Rotate" id="0" name="Set speed" sid="7752762165779859" type="center">
                     <param id="0" name="Speed">0</param>
                 </action>
                 <action id="-16" name="Wait" sid="4900905488719955" type="System">
                     <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="4" name="Set animation" sid="2470977037080101" type="center">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="6456709922168131" type="System">
                     <param id="0" name="Variable">EnemyState</param>
@@ -383,15 +402,10 @@
                 <action id="-19" name="Rotate counter-clockwise" sid="3565455952882482" type="center">
                     <param id="0" name="Degrees">90</param>
                 </action>
-                <action id="0" name="Spawn another object" sid="9492598945474688" type="center">
+                <action id="0" name="Spawn another object" sid="8346892216544303" type="center">
                     <param id="0" name="Object">slowerBullet</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="9401714136846809" type="center">
-                    <param id="0" name="Object">Particles3</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">1</param>
                 </action>
             </actions>
         </event-block>
@@ -425,6 +439,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="4" name="Set animation" sid="8213248915049569" type="center">
+                    <param id="0" name="Animation">&quot;blue&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action behavior="Rotate" id="0" name="Set speed" sid="7038593155877446" type="center">
                     <param id="0" name="Speed">0</param>
                 </action>
@@ -434,6 +452,10 @@
                 <action id="-9" name="Set value" sid="8509004976396576" type="System">
                     <param id="0" name="Variable">EnemyState</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="6956919949879009" type="center">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -475,7 +497,7 @@
                 <action id="0" name="Spawn another object" sid="9961944259408779" type="center">
                     <param id="0" name="Object">slowerBullet2</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="9317505284529886" type="System">
                     <param id="0" name="Seconds">0.6</param>
@@ -499,9 +521,13 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="3898005131330529" type="bullet" />
-                <action id="-7" name="Set size" sid="6187297226922389" type="playerCathcher">
-                    <param id="0" name="Width">140</param>
-                    <param id="1" name="Height">40</param>
+                <action id="4" name="Set animation" sid="1405391569675566" type="playerCathcher">
+                    <param id="0" name="Animation">&quot;hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="1343750099063389" type="playerCathcher">
+                    <param id="0" name="Width">135</param>
+                    <param id="1" name="Height">36</param>
                 </action>
                 <action id="-16" name="Wait" sid="3721420708002163" type="System">
                     <param id="0" name="Seconds">0.1</param>
@@ -509,6 +535,10 @@
                 <action id="-7" name="Set size" sid="3957459958255054" type="playerCathcher">
                     <param id="0" name="Width">128</param>
                     <param id="1" name="Height">32</param>
+                </action>
+                <action id="4" name="Set animation" sid="3124839642578933" type="playerCathcher">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -520,9 +550,13 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="7802696319134879" type="slowerBullet" />
-                <action id="-7" name="Set size" sid="4979823435599272" type="playerCathcher">
-                    <param id="0" name="Width">140</param>
-                    <param id="1" name="Height">40</param>
+                <action id="4" name="Set animation" sid="6683312174821839" type="playerCathcher">
+                    <param id="0" name="Animation">&quot;hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="7094372706708188" type="playerCathcher">
+                    <param id="0" name="Width">135</param>
+                    <param id="1" name="Height">36</param>
                 </action>
                 <action id="-16" name="Wait" sid="8890703880631578" type="System">
                     <param id="0" name="Seconds">0.1</param>
@@ -531,16 +565,10 @@
                     <param id="0" name="Width">128</param>
                     <param id="1" name="Height">32</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="7749849842139481">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="7967948635399618" type="playerCathcher">
-                    <param id="0" name="Object">Particles3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="5987757579056525" type="Particles3" />
+                <action id="4" name="Set animation" sid="8533670018405159" type="playerCathcher">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="887145383500293">
@@ -552,8 +580,12 @@
             <actions>
                 <action id="-9" name="Destroy" sid="5384188378278075" type="slowerBullet2" />
                 <action id="-7" name="Set size" sid="860429567816728" type="playerCathcher">
-                    <param id="0" name="Width">140</param>
-                    <param id="1" name="Height">40</param>
+                    <param id="0" name="Width">135</param>
+                    <param id="1" name="Height">36</param>
+                </action>
+                <action id="4" name="Set animation" sid="6111537041920357" type="playerCathcher">
+                    <param id="0" name="Animation">&quot;hit&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="1769499160853024" type="System">
                     <param id="0" name="Seconds">0.1</param>
@@ -561,6 +593,10 @@
                 <action id="-7" name="Set size" sid="5567726901575462" type="playerCathcher">
                     <param id="0" name="Width">128</param>
                     <param id="1" name="Height">32</param>
+                </action>
+                <action id="4" name="Set animation" sid="1108482746453246" type="playerCathcher">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -888,17 +924,5 @@
             </actions>
         </event-block>
         <comment>Effects Sheet</comment>
-        <event-block sid="9625090490720095">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="3792083452995131" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="1959542669271125" type="bullet">
-                    <param id="0" name="Object">bulletTrail</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

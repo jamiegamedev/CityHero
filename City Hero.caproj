@@ -11,7 +11,6 @@
     <saved-with-version>17000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
@@ -62,21 +61,74 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9246137414869479" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1.04" y="0.5" />
                         <collision-poly>
-                            <point x="0.155025" y="0.157241" />
-                            <point x="0.5" y="0.0118086" />
-                            <point x="0.855392" y="0.146675" />
-                            <point x="0.988358" y="0.499689" />
-                            <point x="0.848652" y="0.846488" />
-                            <point x="0.5" y="0.982598" />
-                            <point x="0.147059" y="0.850839" />
-                            <point x="0.0153186" y="0.499689" />
+                            <point x="0.16" y="0.16" />
+                            <point x="0.5" y="0.02" />
+                            <point x="0.71" y="0.29" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="0.99" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0.02" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="2" loop="0" name="fire" pingpong="0" repeatcount="1" repeatto="0" sid="8536616474874634" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.49505" />
-                    <frame duration="1" hotspotX="1.21569" hotspotY="-1.49505" />
+                <animation framecount="1" loop="0" name="fire" pingpong="0" repeatcount="1" repeatto="0" sid="8536616474874634" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.16" y="0.16" />
+                            <point x="0.5" y="0.02" />
+                            <point x="0.71" y="0.29" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="0.99" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="starPink" pingpong="0" repeatcount="1" repeatto="0" sid="2090372009668431" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.16" y="0.16" />
+                            <point x="0.5" y="0.02" />
+                            <point x="0.71" y="0.29" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="0.99" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="starPink2" pingpong="0" repeatcount="1" repeatto="0" sid="9348801376731453" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.16" y="0.16" />
+                            <point x="0.5" y="0.02" />
+                            <point x="0.86" y="0.14" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="0.99" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Blue" pingpong="0" repeatcount="1" repeatto="0" sid="2740358018905398" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.16" y="0.84" />
+                            <point x="0.02" y="0.5" />
+                            <point x="0.14" y="0.14" />
+                            <point x="0.5" y="0.00999999" />
+                            <point x="0.85" y="0.15" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="0.98" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -136,7 +188,28 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3112974844779452" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.517647" />
+                    <frame duration="1" hotspotX="0.472222" hotspotY="0.505882">
+                        <collision-poly>
+                            <point x="0.999574" y="0.00150602" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="hit" pingpong="0" repeatcount="1" repeatto="0" sid="5786627161188917" speed="5">
+                    <frame duration="1" hotspotX="0.483871" hotspotY="0.481928">
+                        <collision-poly>
+                            <point x="0.941486" y="0.106881" />
+                            <point x="0.989911" y="0.480217" />
+                            <point x="0.958031" y="0.895837" />
+                            <point x="0.485479" y="0.943278" />
+                            <point x="0.0218043" y="0.873148" />
+                            <point x="0" y="0.480217" />
+                            <point x="0.014944" y="0.0697533" />
+                            <point x="0.485479" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -359,19 +432,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Particles" sid="9892018707101299">
-            <plugin id="Particles" />
-            <behaviors>
-                <behavior-type name="Pin" sid="9411408567676155">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-        </object-type>
-        <object-type name="Particles2" sid="8377110952925557">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
         <object-type name="Canvas" sid="7310865809495806">
             <plugin id="c2canvas" />
             <texture />
@@ -443,15 +503,6 @@
                     <frame duration="1" hotspotX="0.501424" hotspotY="0.501401" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Particles3" sid="6890295402816864">
-            <plugin id="Particles" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="9988993024726475">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <texture />
         </object-type>
     </object-folder>
     <families />

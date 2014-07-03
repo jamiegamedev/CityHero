@@ -5,11 +5,11 @@
     <event-sheet>Title Screen</event-sheet>
     <size>
         <width>1024</width>
-        <height>768</height>
+        <height>600</height>
     </size>
     <margins>
         <horizontal>1024</horizontal>
-        <vertical>768</vertical>
+        <vertical>600</vertical>
     </margins>
     <unbounded-scrolling>1</unbounded-scrolling>
     <layers>
@@ -37,68 +37,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>518.5</x>
-                        <y>386.5</y>
+                        <x>520.028930664</x>
+                        <y>304.7421875</y>
                         <z>0</z>
-                        <width>1029</width>
-                        <height>793</height>
+                        <width>1046</width>
+                        <height>641</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TouchStartText" uid="11">
-                    <properties>
-                        <text>TOUCH TO START</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Bauhaus 93,-96,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>124</x>
-                        <y>456</y>
-                        <z>0</z>
-                        <width>1055</width>
-                        <height>190</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="CityHeroText" uid="12">
-                    <properties>
-                        <text>CITY HERO</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Bauhaus 93,-96,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Character</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>272</x>
-                        <y>224</y>
-                        <z>0</z>
-                        <width>1055</width>
-                        <height>190</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -79,11 +79,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>967.58203125</x>
-                        <y>-96.829177856</y>
+                        <x>960.195007324</x>
+                        <y>-93.302970886</y>
                         <z>0</z>
-                        <width>52.377944946</width>
-                        <height>25.002693176</height>
+                        <width>37.603881836</width>
+                        <height>17.950271606</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -194,11 +194,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>750.970703125</x>
-                        <y>-26.507610321</y>
+                        <x>741.89239502</x>
+                        <y>-17.694736481</y>
                         <z>0</z>
-                        <width>51.564060211</width>
-                        <height>56.00245285</height>
+                        <width>34.423839569</width>
+                        <height>37.386882782</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -283,11 +283,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1136.271850586</x>
-                        <y>-70.581665039</y>
+                        <x>1129.015380859</x>
+                        <y>-62.544929504</y>
                         <z>0</z>
-                        <width>42.553909302</width>
-                        <height>47.12330246</height>
+                        <width>28.029251099</width>
+                        <height>31.039003372</height>
                         <depth>0</depth>
                         <hotspotX>0.499604106</hotspotX>
                         <hotspotY>0.500336707</hotspotY>

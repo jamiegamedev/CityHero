@@ -9,7 +9,7 @@
         <variable constant="0" name="health" sid="140231717750104" static="0" type="number">5</variable>
         <variable constant="0" name="EnemyState" sid="2940499343766213" static="0" type="number">0</variable>
         <comment>KEYBOARD CONTROLS</comment>
-        <event-block sid="4829187660266104">
+        <event-block disabled="1" sid="4829187660266104">
             <conditions>
                 <condition id="2" name="Key is down" sid="8115290971315861" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
@@ -21,7 +21,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1412264332437754">
+        <event-block disabled="1" sid="1412264332437754">
             <conditions>
                 <condition id="2" inverted="1" name="Key is down" sid="9255397876912325" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
@@ -36,7 +36,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7004000084943757">
+        <event-block disabled="1" sid="7004000084943757">
             <conditions>
                 <condition id="2" name="Key is down" sid="2587657774789591" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
@@ -64,7 +64,7 @@
             </actions>
         </event-block>
         <comment>TOUCH CONTROLS</comment>
-        <event-block disabled="1" sid="6791535004571686">
+        <event-block sid="6791535004571686">
             <conditions>
                 <condition id="4" name="Is touching object" sid="9832509008847697" type="Touch">
                     <param id="0" name="Object">LeftTouch</param>
@@ -76,7 +76,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="7644358208678159">
+        <event-block sid="7644358208678159">
             <conditions>
                 <condition id="4" inverted="1" name="Is touching object" sid="7071965446308765" type="Touch">
                     <param id="0" name="Object">LeftTouch</param>
@@ -91,7 +91,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="95399739876874">
+        <event-block sid="95399739876874">
             <conditions>
                 <condition id="4" name="Is touching object" sid="7041197418378494" type="Touch">
                     <param id="0" name="Object">RightTouch</param>
@@ -526,15 +526,15 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-7" name="Set size" sid="1343750099063389" type="playerCathcher">
-                    <param id="0" name="Width">135</param>
-                    <param id="1" name="Height">36</param>
+                    <param id="0" name="Width">100</param>
+                    <param id="1" name="Height">25</param>
                 </action>
                 <action id="-16" name="Wait" sid="3721420708002163" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-7" name="Set size" sid="3957459958255054" type="playerCathcher">
-                    <param id="0" name="Width">128</param>
-                    <param id="1" name="Height">32</param>
+                    <param id="0" name="Width">75</param>
+                    <param id="1" name="Height">15</param>
                 </action>
                 <action id="4" name="Set animation" sid="3124839642578933" type="playerCathcher">
                     <param id="0" name="Animation">&quot;default&quot;</param>
@@ -555,15 +555,15 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-7" name="Set size" sid="7094372706708188" type="playerCathcher">
-                    <param id="0" name="Width">135</param>
-                    <param id="1" name="Height">36</param>
+                    <param id="0" name="Width">100</param>
+                    <param id="1" name="Height">25</param>
                 </action>
                 <action id="-16" name="Wait" sid="8890703880631578" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-7" name="Set size" sid="4434766343351426" type="playerCathcher">
-                    <param id="0" name="Width">128</param>
-                    <param id="1" name="Height">32</param>
+                    <param id="0" name="Width">75</param>
+                    <param id="1" name="Height">15</param>
                 </action>
                 <action id="4" name="Set animation" sid="8533670018405159" type="playerCathcher">
                     <param id="0" name="Animation">&quot;default&quot;</param>
@@ -580,8 +580,8 @@
             <actions>
                 <action id="-9" name="Destroy" sid="5384188378278075" type="slowerBullet2" />
                 <action id="-7" name="Set size" sid="860429567816728" type="playerCathcher">
-                    <param id="0" name="Width">135</param>
-                    <param id="1" name="Height">36</param>
+                    <param id="0" name="Width">100</param>
+                    <param id="1" name="Height">25</param>
                 </action>
                 <action id="4" name="Set animation" sid="6111537041920357" type="playerCathcher">
                     <param id="0" name="Animation">&quot;hit&quot;</param>
@@ -591,8 +591,8 @@
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-7" name="Set size" sid="5567726901575462" type="playerCathcher">
-                    <param id="0" name="Width">128</param>
-                    <param id="1" name="Height">32</param>
+                    <param id="0" name="Width">75</param>
+                    <param id="1" name="Height">15</param>
                 </action>
                 <action id="4" name="Set animation" sid="1108482746453246" type="playerCathcher">
                     <param id="0" name="Animation">&quot;default&quot;</param>
@@ -768,7 +768,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="3223274282654972" type="positiveHealth">
-                    <param id="0" name="Width">320</param>
+                    <param id="0" name="Width">288</param>
                 </action>
             </actions>
         </event-block>
@@ -782,7 +782,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="6714038206118197" type="positiveHealth">
-                    <param id="0" name="Width">270</param>
+                    <param id="0" name="Width">230</param>
                 </action>
             </actions>
         </event-block>
@@ -796,7 +796,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="3387703720219105" type="positiveHealth">
-                    <param id="0" name="Width">190</param>
+                    <param id="0" name="Width">175</param>
                 </action>
             </actions>
         </event-block>

@@ -563,6 +563,25 @@
         <object-type name="RestartButton" sid="6540179928980186">
             <plugin id="Button" />
         </object-type>
+        <object-type name="Sprite2" sid="2410326582770495">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6720334730229576" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.046875" y="0.0957447" />
+                            <point x="0.5" y="0.0638298" />
+                            <point x="0.942708" y="0.117021" />
+                            <point x="0.963542" y="0.5" />
+                            <point x="0.947917" y="0.893617" />
+                            <point x="0.5" y="0.925532" />
+                            <point x="0.0572917" y="0.882979" />
+                            <point x="0.0260417" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">

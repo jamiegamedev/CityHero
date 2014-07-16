@@ -878,7 +878,7 @@
                     <param id="0" name="X">416</param>
                     <param id="1" name="Y">160</param>
                 </action>
-                <action id="-3" name="Set position" sid="9996107664792001" type="RestartButton">
+                <action id="-3" name="Set position" sid="9993445975397653" type="Sprite2">
                     <param id="0" name="X">416</param>
                     <param id="1" name="Y">512</param>
                 </action>
@@ -908,7 +908,9 @@
         </event-block>
         <event-block sid="7420759214573473">
             <conditions>
-                <condition id="0" name="On clicked" sid="5139351957579067" type="RestartButton" />
+                <condition id="3" name="On touched object" sid="5139351957579067" type="Touch">
+                    <param id="0" name="Object">Sprite2</param>
+                </condition>
                 <condition id="-14" name="Compare variable" sid="7496152251777135" type="System">
                     <param id="0" name="Variable">health</param>
                     <param id="1" name="Comparison">3</param>

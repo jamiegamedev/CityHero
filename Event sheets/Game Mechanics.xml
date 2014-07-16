@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game Mechanics</name>
     <events>
+        <variable constant="0" name="Score" sid="2785957568662015" static="0" type="number">1</variable>
         <variable constant="0" name="disparitionSpeed" sid="4681057794841868" static="0" type="number">15</variable>
         <variable constant="0" name="GameSpeed" sid="63319478434843" static="0" type="number">0</variable>
         <variable constant="0" name="timer" sid="7601131313519906" static="0" type="number">0</variable>
@@ -151,13 +152,13 @@
         <event-block sid="9004736572731867">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="7746519850605167" type="System">
-                    <param id="0" name="Interval (seconds)">0.01</param>
+                    <param id="0" name="Interval (seconds)">1</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Add to" sid="5759862502377565" type="System">
                     <param id="0" name="Variable">timer</param>
-                    <param id="1" name="Value">0.01</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -520,7 +521,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="3898005131330529" type="bullet" />
+                <action behavior="Bullet" id="0" name="Set speed" sid="3898005131330529" type="bullet">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="4670694447465419" type="bullet">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="7914450407991292" type="bullet" />
                 <action id="4" name="Set animation" sid="1405391569675566" type="playerCathcher">
                     <param id="0" name="Animation">&quot;hit&quot;</param>
                     <param id="1" name="From">1</param>
@@ -528,6 +536,10 @@
                 <action id="-7" name="Set size" sid="1343750099063389" type="playerCathcher">
                     <param id="0" name="Width">100</param>
                     <param id="1" name="Height">25</param>
+                </action>
+                <action id="-10" name="Add to" sid="3212137751660052" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="3721420708002163" type="System">
                     <param id="0" name="Seconds">0.1</param>
@@ -549,7 +561,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="7802696319134879" type="slowerBullet" />
+                <action id="4" name="Set animation" sid="1064016371696743" type="slowerBullet">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="9177906787445642" type="slowerBullet" />
                 <action id="4" name="Set animation" sid="6683312174821839" type="playerCathcher">
                     <param id="0" name="Animation">&quot;hit&quot;</param>
                     <param id="1" name="From">1</param>
@@ -557,6 +573,10 @@
                 <action id="-7" name="Set size" sid="7094372706708188" type="playerCathcher">
                     <param id="0" name="Width">100</param>
                     <param id="1" name="Height">25</param>
+                </action>
+                <action id="-10" name="Add to" sid="3045566528711087" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">3</param>
                 </action>
                 <action id="-16" name="Wait" sid="8890703880631578" type="System">
                     <param id="0" name="Seconds">0.1</param>
@@ -578,7 +598,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="5384188378278075" type="slowerBullet2" />
+                <action id="4" name="Set animation" sid="9964208669648209" type="slowerBullet2">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="3273062095090729" type="slowerBullet2" />
                 <action id="-7" name="Set size" sid="860429567816728" type="playerCathcher">
                     <param id="0" name="Width">100</param>
                     <param id="1" name="Height">25</param>
@@ -586,6 +610,10 @@
                 <action id="4" name="Set animation" sid="6111537041920357" type="playerCathcher">
                     <param id="0" name="Animation">&quot;hit&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="3223842049372603" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">2</param>
                 </action>
                 <action id="-16" name="Wait" sid="1769499160853024" type="System">
                     <param id="0" name="Seconds">0.1</param>
@@ -841,9 +869,18 @@
                 <action id="-5" name="Set width" sid="619305166776451" type="positiveHealth">
                     <param id="0" name="Width">0</param>
                 </action>
-                <action id="-3" name="Set position" sid="9289374477891052" type="Sprite2">
-                    <param id="0" name="X">512</param>
+                <action id="-9" name="Destroy" sid="4764039030174278" type="HitFlash" />
+                <action id="-3" name="Set position" sid="1585645835640393" type="FinalScore">
+                    <param id="0" name="X">352</param>
                     <param id="1" name="Y">384</param>
+                </action>
+                <action id="-3" name="Set position" sid="8096496742335174" type="GAMEOVER">
+                    <param id="0" name="X">416</param>
+                    <param id="1" name="Y">160</param>
+                </action>
+                <action id="-3" name="Set position" sid="9996107664792001" type="RestartButton">
+                    <param id="0" name="X">416</param>
+                    <param id="1" name="Y">512</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="6036123929874948" type="System">
                     <param id="0" name="Time scale">0</param>
@@ -871,9 +908,7 @@
         </event-block>
         <event-block sid="7420759214573473">
             <conditions>
-                <condition id="4" name="Is touching object" sid="5139351957579067" type="Touch">
-                    <param id="0" name="Object">Sprite2</param>
-                </condition>
+                <condition id="0" name="On clicked" sid="5139351957579067" type="RestartButton" />
                 <condition id="-14" name="Compare variable" sid="7496152251777135" type="System">
                     <param id="0" name="Variable">health</param>
                     <param id="1" name="Comparison">3</param>
@@ -934,6 +969,16 @@
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">Touch.X</param>
                     <param id="3" name="Y">touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2847376768495991">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="155387490793535" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2360165388788002" type="FinalScore">
+                    <param id="0" name="Text">&quot;Final Score = &quot;&amp; Score * timer</param>
                 </action>
             </actions>
         </event-block>

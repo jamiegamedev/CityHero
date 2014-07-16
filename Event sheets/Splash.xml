@@ -20,7 +20,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="6811156460692385" type="System">
-                    <param id="0" name="Layout">Opening</param>
+                    <param id="0" name="Layout">Title Screen</param>
                 </action>
             </actions>
         </event-block>
@@ -32,19 +32,19 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="8762799492506924" type="System">
-                    <param id="0" name="Layout">Opening</param>
+                    <param id="0" name="Layout">Title Screen</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="9308305139320449">
             <conditions>
                 <condition id="3" name="On touched object" sid="1503238952333085" type="Touch">
-                    <param id="0" name="Object">Sprite</param>
+                    <param id="0" name="Object">CityHero</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="9433796576299105" type="System">
-                    <param id="0" name="Layout">Opening</param>
+                    <param id="0" name="Layout">Title Screen</param>
                 </action>
             </actions>
         </event-block>

@@ -216,7 +216,7 @@
                 </action>
                 <action id="0" name="Spawn another object" sid="4333148732308947" type="center">
                     <param id="0" name="Object">bullet</param>
-                    <param id="1" name="Layer">0</param>
+                    <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="9956606717061647" type="center">
@@ -263,7 +263,7 @@
                 </action>
                 <action id="0" name="Spawn another object" sid="947385632956509" type="center">
                     <param id="0" name="Object">slowerBullet</param>
-                    <param id="1" name="Layer">0</param>
+                    <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">1</param>
                 </action>
             </actions>
@@ -404,7 +404,7 @@
                 </action>
                 <action id="0" name="Spawn another object" sid="8346892216544303" type="center">
                     <param id="0" name="Object">slowerBullet</param>
-                    <param id="1" name="Layer">0</param>
+                    <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">1</param>
                 </action>
             </actions>
@@ -496,7 +496,7 @@
                 </action>
                 <action id="0" name="Spawn another object" sid="9961944259408779" type="center">
                     <param id="0" name="Object">slowerBullet2</param>
-                    <param id="1" name="Layer">0</param>
+                    <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="9317505284529886" type="System">
@@ -504,7 +504,7 @@
                 </action>
                 <action id="0" name="Spawn another object" sid="8150704703863171" type="secondBullet">
                     <param id="0" name="Object">slowerBullet2</param>
-                    <param id="1" name="Layer">0</param>
+                    <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-19" name="Rotate counter-clockwise" sid="4562268796079992" type="center">
@@ -924,5 +924,18 @@
             </actions>
         </event-block>
         <comment>Effects Sheet</comment>
+        <event-block sid="2984349413319385">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="5245560592280156" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="1312744852122862" type="System">
+                    <param id="0" name="Object to create">Sprite6</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">Touch.X</param>
+                    <param id="3" name="Y">touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

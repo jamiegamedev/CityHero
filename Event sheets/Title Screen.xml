@@ -5,11 +5,66 @@
     <events>
         <event-block sid="599913958514342">
             <conditions>
-                <condition id="2" name="Is in touch" sid="1915984890417643" type="Touch" />
+                <condition id="3" name="On touched object" sid="1915984890417643" type="Touch">
+                    <param id="0" name="Object">CityHero</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="23875075718866" type="System">
+                <action id="5" name="Set frame" sid="23875075718866" type="CityHero">
+                    <param id="0" name="Frame number">14</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3528367707350503">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="2746738728066089" type="CityHero">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Number">14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="8972659879595165" type="PlayButton">
+                    <param id="0" name="X">377</param>
+                    <param id="1" name="Y">510</param>
+                </action>
+                <action id="-3" name="Set position" sid="4368882400332434" type="Sprite">
+                    <param id="0" name="X">677</param>
+                    <param id="1" name="Y">510</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5872870041540507">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8349808719713889" type="Touch">
+                    <param id="0" name="Object">PlayButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="447462385465557" type="PlayButton">
+                    <param id="0" name="Animation">&quot;smudge&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="2652727204994534" type="System">
+                    <param id="0" name="Seconds">0.6</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="3752550355548505" type="System">
                     <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5424734229885802">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3581477783046826" type="Touch">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8195232871241703" type="Sprite">
+                    <param id="0" name="Animation">&quot;smudge&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="4499702141641698" type="System">
+                    <param id="0" name="Seconds">0.6</param>
                 </action>
             </actions>
         </event-block>

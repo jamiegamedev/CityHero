@@ -14,9 +14,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Title Screen</layout>
         <layout>Splash</layout>
         <layout>SIGN IN</layout>
-        <event-sheet active="1">Title Screen</event-sheet>
+        <event-sheet>Title Screen</event-sheet>
         <event-sheet>Splash</event-sheet>
-        <event-sheet>Game Mechanics</event-sheet>
+        <event-sheet active="1">Game Mechanics</event-sheet>
         <event-sheet>SignIn</event-sheet>
     </open-tabs>
     <properties>

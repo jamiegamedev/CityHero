@@ -2,7 +2,7 @@
 <c2layout>
     <name>SIGN IN</name>
     <sid>7893000143690401</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>SignIn</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>

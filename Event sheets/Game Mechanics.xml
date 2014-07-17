@@ -39,7 +39,7 @@
                     <param id="1" name="Value">50</param>
                 </action>
                 <action id="-16" name="Wait" sid="3775173048264973" type="System">
-                    <param id="0" name="Seconds">2</param>
+                    <param id="0" name="Seconds">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="4113395919220627" type="loading2" />
                 <action id="-9" name="Destroy" sid="8303046719869633" type="loading1" />
@@ -155,17 +155,6 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="6526703433621328" type="playerCathcher">
                     <param id="0" name="Pin to">playerCenter</param>
                     <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5148792326870918">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="9239012479232088" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="1884667631597798" type="System">
-                    <param id="0" name="Variable">EnemyState</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -912,6 +901,9 @@
                 <action id="-5" name="Set width" sid="619305166776451" type="positiveHealth">
                     <param id="0" name="Width">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="1201163741767181" type="Sprite6">
+                    <param id="0" name="Visibility">0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="269510705584966" type="center" />
                 <action id="-9" name="Destroy" sid="4764039030174278" type="HitFlash" />
                 <action id="-3" name="Set position" sid="6199368809405348" type="UI">
@@ -937,6 +929,9 @@
                     <param id="0" name="X">621</param>
                     <param id="1" name="Y">512</param>
                 </action>
+                <action id="-9" name="Destroy" sid="2153973111255219" type="slowerBullet2" />
+                <action id="-9" name="Destroy" sid="5062131546579105" type="bullet" />
+                <action id="-9" name="Destroy" sid="8363028427714833" type="slowerBullet" />
                 <action id="-13" name="Set time scale" sid="6036123929874948" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>

@@ -27,7 +27,7 @@
                     <param id="0" name="X">377</param>
                     <param id="1" name="Y">510</param>
                 </action>
-                <action id="-3" name="Set position" sid="4368882400332434" type="Leaderboard">
+                <action id="-3" name="Set position" sid="4368882400332434" type="btn_Leaderboard">
                     <param id="0" name="X">677</param>
                     <param id="1" name="Y">510</param>
                 </action>
@@ -55,11 +55,11 @@
         <event-block sid="5424734229885802">
             <conditions>
                 <condition id="3" name="On touched object" sid="3581477783046826" type="Touch">
-                    <param id="0" name="Object">Leaderboard</param>
+                    <param id="0" name="Object">btn_Leaderboard</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="8195232871241703" type="Leaderboard">
+                <action id="4" name="Set animation" sid="8195232871241703" type="btn_Leaderboard">
                     <param id="0" name="Animation">&quot;smudge&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>

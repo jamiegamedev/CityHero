@@ -2,5 +2,24 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>SignIn</name>
-    <events />
+    <events>
+        <event-block sid="688779903931102">
+            <conditions>
+                <condition id="15" name="On Login (From Prompt Action)" sid="6555279495951732" type="Clayio" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9135913310296893" type="System">
+                    <param id="0" name="Layout">Splash</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5952297401194049">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6074814314371179" type="System" />
+            </conditions>
+            <actions>
+                <action id="26" name="Prompt Login" sid="9091339367342385" type="Clayio" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

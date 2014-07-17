@@ -70,5 +70,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3053284611674335">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3781503067276901" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="9606431109070079" type="dummyFont">
+                    <param id="0" name="Family name">&quot;plasticineregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;https://dl.dropboxusercontent.com/u/78679641/City%20Hero/Font/stylesheet.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

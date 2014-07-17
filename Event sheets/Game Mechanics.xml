@@ -9,6 +9,49 @@
         <variable constant="0" name="timer" sid="7601131313519906" static="0" type="number">0</variable>
         <variable constant="0" name="health" sid="140231717750104" static="0" type="number">5</variable>
         <variable constant="0" name="EnemyState" sid="2940499343766213" static="0" type="number">0</variable>
+        <event-block sid="810600308267998">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9246942807807597" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="9481952947021367" type="TIMER">
+                    <param id="0" name="Family name">&quot;plasticineregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;https://dl.dropboxusercontent.com/u/78679641/City%20Hero/Font/stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="4016133242483377" type="CityHeroText">
+                    <param id="0" name="Family name">&quot;plasticineregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;https://dl.dropboxusercontent.com/u/78679641/City%20Hero/Font/stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="9756900503862049" type="FinalScore">
+                    <param id="0" name="Family name">&quot;plasticineregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;https://dl.dropboxusercontent.com/u/78679641/City%20Hero/Font/stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="2660077370289808" type="GAMEOVER">
+                    <param id="0" name="Family name">&quot;plasticineregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;https://dl.dropboxusercontent.com/u/78679641/City%20Hero/Font/stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="4442344253690719" type="Health">
+                    <param id="0" name="Family name">&quot;plasticineregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;https://dl.dropboxusercontent.com/u/78679641/City%20Hero/Font/stylesheet.css&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="7871045182340094" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="-16" name="Wait" sid="3775173048264973" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="4113395919220627" type="loading2" />
+                <action id="-9" name="Destroy" sid="8303046719869633" type="loading1" />
+                <action id="-16" name="Wait" sid="2199634950661949" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="3642101109510703" type="System">
+                    <param id="0" name="Variable">EnemyState</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>KEYBOARD CONTROLS</comment>
         <event-block disabled="1" sid="4829187660266104">
             <conditions>
@@ -213,7 +256,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="9578126028215536" type="System">
-                    <param id="0" name="Seconds">0.5</param>
+                    <param id="0" name="Seconds">1</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="4333148732308947" type="center">
                     <param id="0" name="Object">bullet</param>
@@ -869,22 +912,35 @@
                 <action id="-5" name="Set width" sid="619305166776451" type="positiveHealth">
                     <param id="0" name="Width">0</param>
                 </action>
+                <action id="-9" name="Destroy" sid="269510705584966" type="center" />
                 <action id="-9" name="Destroy" sid="4764039030174278" type="HitFlash" />
+                <action id="-3" name="Set position" sid="6199368809405348" type="UI">
+                    <param id="0" name="X">512</param>
+                    <param id="1" name="Y">300</param>
+                </action>
+                <action id="0" name="Set text" sid="5106378640987245" type="FinalScore">
+                    <param id="0" name="Text">&quot;Final Score = &quot;&amp; Score * timer</param>
+                </action>
                 <action id="-3" name="Set position" sid="1585645835640393" type="FinalScore">
-                    <param id="0" name="X">352</param>
-                    <param id="1" name="Y">384</param>
+                    <param id="0" name="X">360</param>
+                    <param id="1" name="Y">300</param>
                 </action>
                 <action id="-3" name="Set position" sid="8096496742335174" type="GAMEOVER">
-                    <param id="0" name="X">416</param>
-                    <param id="1" name="Y">160</param>
+                    <param id="0" name="X">360</param>
+                    <param id="1" name="Y">220</param>
                 </action>
-                <action id="-3" name="Set position" sid="9993445975397653" type="Sprite2">
-                    <param id="0" name="X">416</param>
+                <action id="-3" name="Set position" sid="3072015214647721" type="Submit">
+                    <param id="0" name="X">397</param>
+                    <param id="1" name="Y">512</param>
+                </action>
+                <action id="-3" name="Set position" sid="9993445975397653" type="Restart">
+                    <param id="0" name="X">621</param>
                     <param id="1" name="Y">512</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="6036123929874948" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>
+                <action id="-9" name="Destroy" sid="8091762966449509" type="playerCathcher" />
             </actions>
         </event-block>
         <event-block sid="5930427189897673">
@@ -909,7 +965,7 @@
         <event-block sid="7420759214573473">
             <conditions>
                 <condition id="3" name="On touched object" sid="5139351957579067" type="Touch">
-                    <param id="0" name="Object">Sprite2</param>
+                    <param id="0" name="Object">Restart</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="7496152251777135" type="System">
                     <param id="0" name="Variable">health</param>
@@ -918,11 +974,18 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-21" name="Reset global variables" sid="1879176452751103" type="System" />
-                <action id="-13" name="Set time scale" sid="9395911013981492" type="System">
+                <action id="4" name="Set animation" sid="7420995260005478" type="Restart">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="5190428193858428" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>
-                <action id="-26" name="Restart layout" sid="3930364853594053" type="System" />
+                <action id="-21" name="Reset global variables" sid="188925318002606" type="System" />
+                <action id="-16" name="Wait" sid="2406563791266498" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="1842974747569427" type="System" />
             </actions>
         </event-block>
         <comment>GameSpeed change conditions</comment>
@@ -964,6 +1027,11 @@
         <event-block sid="2984349413319385">
             <conditions>
                 <condition id="2" name="Is in touch" sid="5245560592280156" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="7874037426874521" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="1312744852122862" type="System">
@@ -974,13 +1042,34 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2847376768495991">
+        <comment>BACKEND</comment>
+        <event-block sid="526596926073531">
             <conditions>
-                <condition id="-1" name="Every tick" sid="155387490793535" type="System" />
+                <condition id="3" name="On touched object" sid="2939350615273343" type="Touch">
+                    <param id="0" name="Object">Submit</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="5449964665029745" type="Submit">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="2360165388788002" type="FinalScore">
-                    <param id="0" name="Text">&quot;Final Score = &quot;&amp; Score * timer</param>
+                <action id="4" name="Set animation" sid="5140386485601351" type="Submit">
+                    <param id="0" name="Animation">&quot;Hit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="3" name="Post Leaderboard Score" sid="1686151765058775" type="Clayio">
+                    <param id="0" name="Player Name">&quot;&quot;</param>
+                    <param id="1" name="Player Score">Score * timer</param>
+                    <param id="2" name="Leaderboard ID">4265</param>
+                    <param id="3" name="Show Notification">0</param>
+                </action>
+                <action id="4" name="Show Leaderboard" sid="6599907937116064" type="Clayio">
+                    <param id="0" name="Leaderboard ID">4265</param>
+                    <param id="1" name="Time Frame">0</param>
+                    <param id="2" name="High Score">0</param>
+                    <param id="3" name="Sort">0</param>
+                    <param id="4" name="Scores From">0</param>
+                    <param id="5" name="Number of Scores">10</param>
                 </action>
             </actions>
         </event-block>

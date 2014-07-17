@@ -11,6 +11,7 @@
     <saved-with-version>17300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Clay.io" id="Clay" version="1">Clay.io</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -494,7 +495,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="5324664109485457">
+        <object-type name="Leaderboard" sid="5324664109485457">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6222097845630677" speed="5">
@@ -563,20 +564,135 @@
         <object-type name="RestartButton" sid="6540179928980186">
             <plugin id="Button" />
         </object-type>
-        <object-type name="Sprite2" sid="2410326582770495">
+        <object-type name="Restart" sid="2410326582770495">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6720334730229576" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.507692" hotspotY="0.630769">
                         <collision-poly>
-                            <point x="0.046875" y="0.0957447" />
-                            <point x="0.5" y="0.0638298" />
-                            <point x="0.942708" y="0.117021" />
-                            <point x="0.963542" y="0.5" />
-                            <point x="0.947917" y="0.893617" />
-                            <point x="0.5" y="0.925532" />
-                            <point x="0.0572917" y="0.882979" />
-                            <point x="0.0260417" y="0.5" />
+                            <point x="0.127626" y="0.0244929" />
+                            <point x="0.882046" y="0.0244929" />
+                            <point x="0.971029" y="0.631917" />
+                            <point x="0.771785" y="0.960122" />
+                            <point x="0.237887" y="0.960122" />
+                            <point x="0.0289708" y="0.631917" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="889746576605666" speed="5">
+                    <frame duration="1" hotspotX="0.507813" hotspotY="0.640625">
+                        <collision-poly>
+                            <point x="0.121807" y="0.0248756" />
+                            <point x="0.888016" y="0.0248756" />
+                            <point x="0.978389" y="0.641791" />
+                            <point x="0.776031" y="0.975124" />
+                            <point x="0.233792" y="0.975124" />
+                            <point x="0.021611" y="0.641791" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Clayio" sid="9762304060347751">
+            <plugin id="Clay" />
+        </object-type>
+        <object-type name="Submit" sid="7211524134846781">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468370234162889" speed="5">
+                    <frame duration="1" hotspotX="0.507813" hotspotY="0.640625">
+                        <collision-poly>
+                            <point x="0.208251" y="0.0248756" />
+                            <point x="0.799607" y="0.0248756" />
+                            <point x="0.978389" y="0.641791" />
+                            <point x="0.687623" y="0.975124" />
+                            <point x="0.320236" y="0.975124" />
+                            <point x="0.021611" y="0.641791" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="3154241640924441" speed="5">
+                    <frame duration="1" hotspotX="0.507813" hotspotY="0.640625">
+                        <collision-poly>
+                            <point x="0.208251" y="0.0248756" />
+                            <point x="0.799607" y="0.0248756" />
+                            <point x="0.978389" y="0.641791" />
+                            <point x="0.687623" y="0.975124" />
+                            <point x="0.320236" y="0.975124" />
+                            <point x="0.021611" y="0.641791" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dummyFont" sid="5526588225715428">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="loading1" sid="3426917353948762">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6098734407045489" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="712351242854151">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8318846837493455" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UI" sid="7900426252109008">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6963351000413348" speed="5">
+                    <frame duration="1" hotspotX="0.498031" hotspotY="0.623907">
+                        <collision-poly>
+                            <point x="0.0944882" y="0.177843" />
+                            <point x="0.498031" y="0.0233236" />
+                            <point x="0.901575" y="0.177843" />
+                            <point x="0.992126" y="0.562682" />
+                            <point x="0.919291" y="0.973761" />
+                            <point x="0.0767717" y="0.973761" />
+                            <point x="0.00787402" y="0.562682" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UI2" sid="7551659959039152">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4561042638380935" speed="5">
+                    <frame duration="1" hotspotX="0.505859" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0294695" y="0.0366379" />
+                            <point x="0.502947" y="0.0215517" />
+                            <point x="0.972495" y="0.0431034" />
+                            <point x="0.972495" y="0.956897" />
+                            <point x="0.502947" y="0.976293" />
+                            <point x="0.0314342" y="0.961207" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="loading2" sid="5339875629745705">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="4010954967489955">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5713324357381817" speed="5">
+                    <frame duration="1" hotspotX="0.50303" hotspotY="0.503759">
+                        <collision-poly>
+                            <point x="0.23" y="0.277311" />
+                            <point x="0.49" y="0.226891" />
+                            <point x="0.8" y="0.210084" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -585,6 +701,7 @@
     </object-folder>
     <families />
     <layout-folder expanded="1">
+        <layout>SIGN IN.xml</layout>
         <layout>Splash.xml</layout>
         <layout>Title Screen.xml</layout>
         <layout>Layout1.xml</layout>
@@ -595,12 +712,22 @@
         <event-sheet>Title Screen.xml</event-sheet>
         <event-sheet>Tried mechanics.xml</event-sheet>
         <event-sheet>Splash.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>SignIn.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
         <global-instance type="Touch" uid="7">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Clayio" uid="29">
+            <properties>
+                <api-key>claydefence</api-key>
+                <debug-mode>Disabled</debug-mode>
+                <use-clayio-styles>Enabled</use-clayio-styles>
+                <use-clayio-loader>Enabled</use-clayio-loader>
             </properties>
         </global-instance>
     </global-instances>
@@ -615,5 +742,10 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="stylesheet.css" />
+        <file name="ufonts.com_plasticine-webfont.eot" />
+        <file name="ufonts.com_plasticine-webfont.svg" />
+        <file name="ufonts.com_plasticine-webfont.ttf" />
+        <file name="ufonts.com_plasticine-webfont.woff" />
     </files-folder>
 </c2project>

@@ -18,7 +18,8 @@
                 <condition id="-2" name="On start of layout" sid="6074814314371179" type="System" />
             </conditions>
             <actions>
-                <action id="26" name="Prompt Login" sid="9091339367342385" type="Clayio" />
+                <action id="38" name="Prompt Logout" sid="4018796159610045" type="Clayio" />
+                <action id="26" name="Prompt Login" sid="4648489492392444" type="Clayio" />
             </actions>
         </event-block>
     </events>

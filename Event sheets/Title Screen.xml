@@ -11,7 +11,7 @@
             </conditions>
             <actions>
                 <action id="5" name="Set frame" sid="23875075718866" type="CityHero">
-                    <param id="0" name="Frame number">14</param>
+                    <param id="0" name="Frame number">12</param>
                 </action>
             </actions>
         </event-block>
@@ -19,17 +19,25 @@
             <conditions>
                 <condition id="3" name="Compare frame" sid="2746738728066089" type="CityHero">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="Number">14</param>
+                    <param id="1" name="Number">12</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="8972659879595165" type="PlayButton">
                     <param id="0" name="X">377</param>
-                    <param id="1" name="Y">510</param>
+                    <param id="1" name="Y">425</param>
                 </action>
                 <action id="-3" name="Set position" sid="4368882400332434" type="btn_Leaderboard">
                     <param id="0" name="X">677</param>
-                    <param id="1" name="Y">510</param>
+                    <param id="1" name="Y">425</param>
+                </action>
+                <action id="-3" name="Set position" sid="2078930167067532" type="HowToPlay1">
+                    <param id="0" name="X">532.</param>
+                    <param id="1" name="Y">540</param>
+                </action>
+                <action id="-3" name="Set position" sid="2935027908182385" type="HowtoPlay">
+                    <param id="0" name="X">440</param>
+                    <param id="1" name="Y">521</param>
                 </action>
             </actions>
         </event-block>
@@ -81,7 +89,7 @@
                 <condition id="-2" name="On start of layout" sid="8738338748167172" type="System" />
             </conditions>
             <actions>
-                <action id="5" name="Set web font" sid="38335610311341" type="dummyFont">
+                <action id="5" name="Set web font" sid="38335610311341" type="HowtoPlay">
                     <param id="0" name="Family name">&quot;plasticineregular&quot;</param>
                     <param id="1" name="CSS URL">&quot;https://dl.dropboxusercontent.com/u/78679641/City%20Hero/Font/stylesheet.css&quot;</param>
                 </action>
@@ -90,6 +98,49 @@
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;title&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6825850543472947">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4457223637606398" type="Touch">
+                    <param id="0" name="Object">HowToPlay1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="6818306419487235" type="Sprite7">
+                    <param id="0" name="X">497</param>
+                    <param id="1" name="Y">482</param>
+                </action>
+                <action id="-3" name="Set position" sid="5515953712918713" type="instruction">
+                    <param id="0" name="X">515</param>
+                    <param id="1" name="Y">351</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3834679492083643">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2953268679428336" type="Touch">
+                    <param id="0" name="Object">instruction</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="2226289026590881" type="instruction">
+                    <param id="0" name="X">1280</param>
+                    <param id="1" name="Y">1000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3510833526519662">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6253517745002566" type="Touch">
+                    <param id="0" name="Object">Sprite7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="5326557690397659" type="Sprite7">
+                    <param id="0" name="X">1280</param>
+                    <param id="1" name="Y">1000</param>
                 </action>
             </actions>
         </event-block>

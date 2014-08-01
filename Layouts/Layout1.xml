@@ -123,7 +123,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI2" uid="42">
+                <instance type="HowToPlay1" uid="42">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -726,7 +726,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
+                        <x>576</x>
                         <y>384</y>
                         <z>0</z>
                         <width>1216</width>
